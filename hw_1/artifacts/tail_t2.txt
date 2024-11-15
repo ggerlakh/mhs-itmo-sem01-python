@@ -1,0 +1,22 @@
+==> nl.py <==
+                    space_prefix = " " * (5 - curr_idx_len + 1)
+                    stripped_line = line.rstrip('\n')
+                    print(f"{space_prefix}{i}  {stripped_line}")
+                    i += 1
+        else:
+            print(f"nl: {filename} No such file or directory", file=sys.stderr)
+
+
+if __name__ == '__main__':
+    nl()
+==> README.md <==
+
+  ```bash
+  tail nl.py README.md > artifacts/tail_t1.txt && python3 tail.py nl.py README.md > artifacts/tail_t2.txt && vimdiff artifacts/tail_t1.txt artifacts/tail_t2.txt
+  ```
+- Для сравнения вывода данных которые берутся из `stdin` можно использовать следующую команду в (которая подразумевает наличие установленного `vimdiff`, вместо `README.md` можно подставить путь до другого файла или другой `stdin`) 
+
+Пример работы работы скрипта `nl.py`
+![nl.py demo](https://github.com/ggerlakh/mhs-itmo-sem01-python/blob/main/hw_1/artifacts/nl_artifact1.png)
+
+## Скрипт wc.py

@@ -47,22 +47,28 @@ Options:
 ## Скрипт tail.py
 
 ```bash
-Usage: nl.py [OPTIONS] [FILENAME]
+Usage: tail.py [OPTIONS] [FILENAMES]...
 
-  Simple line numbering filter that works like `nl -b a`
+  Simple display the last part of a file that works like `tail` command
+  without options.
 
 Options:
   --help  Show this message and exit.
+ggerlakh@MacBook-Air-Gleb hw_1 % 
 ```
 
-- Если на вход скрипту `nl.py ` передается файл, то для сравнения вывода скрипта `python3 nl.py <filename>` с командой `nl -b a <path_to_file>` можно использовать следующую команду в (которая подразумевает наличие установленного `vimdiff`, вместо `README.md` можно подставить путь до другого файла)  
+- Если на вход скрипту `tail.py ` передается файл (файлы), то для сравнения вывода скрипта `python3 tail.py <filenames>` с командой `tail <path_to_files>` можно использовать следующую команду в (которая подразумевает наличие установленного `vimdiff`, вместо `README.md` и `tail.py` можно подставить путь до другого файла)  
 
   ```bash
-  nl -b a README.md > artifacts/nl_t1.txt && python3 nl.py README.md > artifacts/nl_t2.txt && vimdiff artifacts/nl_t1.txt artifacts/nl_t2.txt
+  tail nl.py README.md > artifacts/tail_t1.txt && python3 tail.py nl.py README.md > artifacts/tail_t2.txt && vimdiff artifacts/tail_t1.txt artifacts/tail_t2.txt
   ```
-- Для сравнения вывода данных которые берутся из `stdin` можно использовать следующую команду в (которая подразумевает наличие установленного `vimdiff`, вместо `README.md` можно подставить путь до другого файла или другой `stdin`) 
+- Для сравнения вывода данных которые берутся из `stdin` можно использовать следующую команду в (которая подразумевает наличие установленного `vimdiff`, вместо `README.md` можно подставить путь до другого файла или другой `stdin`)
 
-Пример работы работы скрипта `nl.py`
-![nl.py demo](https://github.com/ggerlakh/mhs-itmo-sem01-python/blob/main/hw_1/artifacts/nl_artifact1.png)
+  ```bash
+  cat README.md | tail -17 > artifacts/tail_t3.txt && cat README.md | python3 tail.py > artifacts/tail_t4.txt && vimdiff artifacts/tail_t3.txt artifacts/tail_t4.txt
+  ```
+
+Пример работы работы скрипта `tail.py`
+![tail.py demo](https://github.com/ggerlakh/mhs-itmo-sem01-python/blob/main/hw_1/artifacts/tail_artifact1.png)
 
 ## Скрипт wc.py
