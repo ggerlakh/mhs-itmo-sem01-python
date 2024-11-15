@@ -1,0 +1,38 @@
+     1	import click
+     2	import sys
+     3	import os
+     4	
+     5	
+     6	@click.command()
+     7	@click.argument('filename', default="")
+     8	def nl(filename: str):
+     9	    """Simple line numbering filter that works like `nl -b a`."""
+    10	    if filename == "":
+    11	        i = 1
+    12	        try:
+    13	            while True:
+    14	                s = input()
+    15	                curr_idx_len = len(str(i))
+    16	                space_prefix = " " * (5 - curr_idx_len + 1)
+    17	                print(f"{space_prefix}{i}  {s}")
+    18	                i += 1
+    19	        except (KeyboardInterrupt, EOFError):
+    20	            pass
+    21	    else:
+    22	        if os.path.exists(filename):
+    23	            # print(f"successfully found filename = {filename}")
+    24	            with open(filename, 'r') as f:
+    25	                i = 1
+    26	                curr_idx_len = 1
+    27	                for line in f:
+    28	                    curr_idx_len = len(str(i))
+    29	                    space_prefix = " " * (5 - curr_idx_len + 1)
+    30	                    stripped_line = line.rstrip('\n')
+    31	                    print(f"{space_prefix}{i}  {stripped_line}")
+    32	                    i += 1
+    33	        else:
+    34	            print(f"nl: {filename} No such file or directory", file=sys.stderr)
+    35	
+    36	
+    37	if __name__ == '__main__':
+    38	    nl()

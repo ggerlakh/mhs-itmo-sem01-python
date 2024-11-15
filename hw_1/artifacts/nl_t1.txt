@@ -31,11 +31,14 @@
     31	  --help  Show this message and exit.
     32	```
     33	
-    34	Если на вход скрипту `nl.py ` передается файл, то для сравнения вывода скрипта `python3 nl.py <filename>` с командой `nl -b a <path_to_file>` можно использовать следующую команду в (которая подразумевает наличие установленного `vimdiff`)
+    34	Если на вход скрипту `nl.py ` передается файл, то для сравнения вывода скрипта `python3 nl.py <filename>` с командой `nl -b a <path_to_file>` можно использовать следующую команду в (которая подразумевает наличие установленного `vimdiff`, вместо `README.md` можно подставить путь до другого файла)
     35	```bash
-    36	nl -b a README.md > t1.txt && python3 nl.py README.md > t2.txt && vimdiff t1.txt t2.txt
+    36	nl -b a README.md > artifacts/nl_t1.txt && python3 nl.py README.md > artifacts/nl_t2.txt && vimdiff artifacts/nl_t1.txt artifacts/nl_t2.txt
     37	```
     38	
-    39	## Скрипт tail.py
-    40	
-    41	## Скрипт wc.py
+    39	Пример работы работы скрипта `nl.py`
+    40	![nl.py demo](https://github.com/ggerlakh/mhs-itmo-sem01-python/blob/main/hw_1/artifacts/nl_artifact1.png)
+    41	
+    42	## Скрипт tail.py
+    43	
+    44	## Скрипт wc.py
