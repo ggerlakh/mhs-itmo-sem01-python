@@ -1,0 +1,41 @@
+     1	# HW_1
+     2	
+     3	Выполнение первого ДЗ
+     4	
+     5	## Создание виртуального окружения
+     6	
+     7	1. Окружение создается через `conda`  
+     8	
+     9	   ```bash
+    10	   conda create -n hw_1 -c conda-forge python=3.12 click
+    11	   ```
+    12	2. Для активации окружения используется следующая команда:
+    13	   
+    14	   ```bash
+    15	   conda activate hw_1
+    16	   ```
+    17	3. Для деактивации:
+    18	
+    19	   ```bash
+    20	   conda deactivate
+    21	   ```
+    22	
+    23	## Скрипт nl.py
+    24	
+    25	```bash
+    26	Usage: nl.py [OPTIONS] [FILENAME]
+    27	
+    28	  Simple line numbering filter that works like `nl -b a`
+    29	
+    30	Options:
+    31	  --help  Show this message and exit.
+    32	```
+    33	
+    34	Если на вход скрипту `nl.py ` передается файл, то для сравнения вывода скрипта `python3 nl.py <filename>` с командой `nl -b a <path_to_file>` можно использовать следующую команду в (которая подразумевает наличие установленного `vimdiff`)
+    35	```bash
+    36	nl -b a README.md > t1.txt && python3 nl.py README.md > t2.txt && vimdiff t1.txt t2.txt
+    37	```
+    38	
+    39	## Скрипт tail.py
+    40	
+    41	## Скрипт wc.py
