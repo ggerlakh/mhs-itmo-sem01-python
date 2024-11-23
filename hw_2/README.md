@@ -32,3 +32,14 @@ python3 example.py
 ```bash
 pip install -i https://test.pypi.org/simple/ latex-gen-ggerlakh
 ```
+
+## Docker
+
+Также для тестирования библиотеки можно собрать docker образ из `Dockerfile`
+```bash
+docker build . -t latex-gen-ggerlakh-image 
+```
+и запустить его
+```bash
+docker run -it latex-gen-ggerlakh-image bash
+```
