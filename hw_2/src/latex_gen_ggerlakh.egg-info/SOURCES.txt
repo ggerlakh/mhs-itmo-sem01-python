@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/latex_gen_ggerlakh/__init__.py
+src/latex_gen_ggerlakh/convert_to_tex.py
+src/latex_gen_ggerlakh/example.py
+src/latex_gen_ggerlakh.egg-info/PKG-INFO
+src/latex_gen_ggerlakh.egg-info/SOURCES.txt
+src/latex_gen_ggerlakh.egg-info/dependency_links.txt
+src/latex_gen_ggerlakh.egg-info/top_level.txt

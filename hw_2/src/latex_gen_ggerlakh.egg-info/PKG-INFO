@@ -1,3 +1,16 @@
+Metadata-Version: 2.1
+Name: latex_gen_ggerlakh
+Version: 0.0.3
+Summary: A small example latex gen package
+Author-email: Gleb Gerlakh <ggerlah55@gmail.com>
+Project-URL: Homepage, https://github.com/ggerlakh/mhs-itmo-sem01-python/tree/main/hw_2
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
 # HW_2
 
 Выполнение второго ДЗ

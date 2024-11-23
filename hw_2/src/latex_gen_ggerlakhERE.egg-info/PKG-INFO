@@ -1,10 +1,23 @@
+Metadata-Version: 2.1
+Name: latex_gen_ggerlakhERE
+Version: 0.0.1
+Summary: A small example latex gen package
+Author-email: Gleb Gerlakh <ggerlah55@gmail.com>
+Project-URL: Homepage, https://github.com/ggerlakh/mhs-itmo-sem01-python/tree/main/hw_2
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
 # HW_2
 
 Выполнение второго ДЗ
 
 ## latex_gen_ggerlakh
 
-Библиотека для генерации .tex кода. (https://test.pypi.org/project/latex-gen-ggerlakh/)  
+Библиотека для генерации .tex кода.  
 
 Основная функциональность описана в модуле `src/latex_gen_ggerlakh/convert_to_tex.py`:
 
@@ -20,15 +33,3 @@
 ## Пример использования
 
 Пример использования библиотеки описан в файле `src/latex_gen_ggerlakh/example.py`
-
-```bash
-cd src/latex_gen_ggerlakh
-python3 example.py 
-```
-
-## Инструкция по установке
-
-Для установки библиотеки можно использовать следующую команду:
-```bash
-pip install -i https://test.pypi.org/simple/ latex-gen-ggerlakh
-```

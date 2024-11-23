@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "latex_gen_ggerlakh"
+version = "0.0.3"
+authors = [
+  { name="Gleb Gerlakh", email="ggerlah55@gmail.com" },
+]
+description = "A small example latex gen package"
+readme = "README.md"
+requires-python = ">=3.11"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/ggerlakh/mhs-itmo-sem01-python/tree/main/hw_2"
