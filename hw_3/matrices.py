@@ -1,9 +1,45 @@
+import numpy as np
 
 
-class Matrix:
+class MatrixNumpy(np.ndarray):
+    def __new__(cls, data):
+        if not isinstance(data, (list)):
+            raise TypeError("Matrix data must be a list")
+        obj = np.asarray(data).view(cls)
+        return obj
+
+class MatrixStrOutput:
+    def __str__(self):
+        res_str = ""
+        for i in range(self.n):
+            res_str += (' '.join(list(map(str, self._matrix_data[i]))) + "\n")
+        return res_str
+
+
+class MatrixFileOutput:
+    def write_to_file(self, fp):
+        fp.write(str(self))
+
+
+class MatrixDescriptor:
+
+    @property
+    def matrix_data(self):
+        return self._matrix_data
+    
+    @matrix_data.setter
+    def matrix_data(self, data):
+        if not isinstance(data, list):
+            raise TypeError("Matrix data must be a list")
+        self._matrix_data = data
+        self.n = len(data)
+        self.m = len(data[0])
+
+
+class Matrix(MatrixFileOutput, MatrixDescriptor, MatrixStrOutput, MatrixNumpy):
 
     def __init__(self, data):
-        self.data = data
+        self._matrix_data = data
         self.n = len(data)
         self.m = len(data[0])
 
@@ -15,7 +51,7 @@ class Matrix:
             res_data.append([0 for _ in range(self.m)])
         for i in range(self.n):
             for j in range(self.m):
-                res_data[i][j] = (self.data[i][j] + other.data[i][j])
+                res_data[i][j] = (self._matrix_data[i][j] + other._matrix_data[i][j])
         return self.__class__(res_data)
 
     def __mul__(self, other):
@@ -26,7 +62,7 @@ class Matrix:
             res_data.append([0 for _ in range(self.m)])
         for i in range(self.n):
             for j in range(self.m):
-                res_data[i][j] = (self.data[i][j] * other.data[i][j])
+                res_data[i][j] = (self._matrix_data[i][j] * other._matrix_data[i][j])
         return self.__class__(res_data)
 
     def __matmul__(self, other):
@@ -38,6 +74,5 @@ class Matrix:
         for i in range(self.n):
             for j in range(other.m):
                 for k in range(self.m):
-                    res_data[i][j] += (self.data[i][k] * other.data[k][j])
+                    res_data[i][j] += (self._matrix_data[i][k] * other._matrix_data[k][j])
         return self.__class__(res_data)
-        
