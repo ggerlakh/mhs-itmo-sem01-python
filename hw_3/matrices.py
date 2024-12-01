@@ -14,6 +14,23 @@ class MatrixStrOutput:
         for i in range(self.n):
             res_str += (' '.join(list(map(str, self._matrix_data[i]))) + "\n")
         return res_str
+    
+"""
+Простая хеш-функция, сумма диагональных элементов матрицы
+Коллизия если mat1.trace() == mat2.trace() при разных элеменах матрицы, пример
+[
+[-1, 4],
+[5, 1]
+]
+
+[
+[5, 33],
+[9, -5]
+]
+"""
+class MatrixHash:
+    def __hash__(self):
+        return int(self.trace())
 
 
 class MatrixFileOutput:
@@ -36,7 +53,7 @@ class MatrixDescriptor:
         self.m = len(data[0])
 
 
-class Matrix(MatrixFileOutput, MatrixDescriptor, MatrixStrOutput, MatrixNumpy):
+class Matrix(MatrixHash, MatrixFileOutput, MatrixDescriptor, MatrixStrOutput, MatrixNumpy):
 
     def __init__(self, data):
         self._matrix_data = data
