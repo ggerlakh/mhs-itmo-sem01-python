@@ -1,0 +1,24 @@
+created main process with pid = 5147
+starting main process
+______________________________
+created A process with pid = 5149
+starting A process
+______________________________
+a_queue size = 5
+sleeping for 5 sec
+a_queue size = 4
+sleeping for 5 sec
+a_queue size = 3
+sleeping for 5 sec
+a_queue size = 2
+sleeping for 5 sec
+a_queue size = 1
+sleeping for 5 sec
+created B process with pid = 5151
+starting B process
+______________________________
+[2024-12-09T02:55:02.126278+05:00] message   svefg
+[2024-12-09T02:55:07.133071+05:00] message   frpbaq
+[2024-12-09T02:55:12.139058+05:00] message   guveq
+[2024-12-09T02:55:17.143700+05:00] message   sbhegu
+[2024-12-09T02:55:22.149987+05:00] message   svsgu
