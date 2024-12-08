@@ -1,0 +1,36 @@
+starting 0 thread task 'partial_sum()' on [0, 10000000]
+integrate_with_threads time (n_jobs=1): 0.5762839317321777, result = 1.0000000785399288
+______________________________
+starting 0 process task 'partial_sum()' on [0, 10000000]
+integrate_with_processes time (n_jobs=1): 0.6099209785461426, result = 1.0000000785399288
+______________________________
+starting 0 thread task 'partial_sum()' on [0, 5000000]
+starting 1 thread task 'partial_sum()' on [5000000, 10000000]
+integrate_with_threads time (n_jobs=2): 0.571087121963501, result = 1.0000000785398064
+______________________________
+starting 0 process task 'partial_sum()' on [0, 5000000]
+starting 1 process task 'partial_sum()' on [5000000, 10000000]
+integrate_with_processes time (n_jobs=2): 0.3418428897857666, result = 1.0000000785398064
+______________________________
+starting 0 thread task 'partial_sum()' on [0, 3333333]
+starting 1 thread task 'partial_sum()' on [3333333, 6666666]
+starting 2 thread task 'partial_sum()' on [6666666, 9999999]
+integrate_with_threads time (n_jobs=3): 0.5722858905792236, result = 1.0000000785397705
+______________________________
+starting 0 process task 'partial_sum()' on [0, 3333333]
+starting 1 process task 'partial_sum()' on [3333333, 6666666]
+starting 2 process task 'partial_sum()' on [6666666, 9999999]
+integrate_with_processes time (n_jobs=3): 0.2523369789123535, result = 1.0000000785397705
+______________________________
+starting 0 thread task 'partial_sum()' on [0, 2500000]
+starting 1 thread task 'partial_sum()' on [2500000, 5000000]
+starting 2 thread task 'partial_sum()' on [5000000, 7500000]
+starting 3 thread task 'partial_sum()' on [7500000, 10000000]
+integrate_with_threads time (n_jobs=4): 0.5722041130065918, result = 1.000000078539799
+______________________________
+starting 0 process task 'partial_sum()' on [0, 2500000]
+starting 1 process task 'partial_sum()' on [2500000, 5000000]
+starting 2 process task 'partial_sum()' on [5000000, 7500000]
+starting 3 process task 'partial_sum()' on [7500000, 10000000]
+integrate_with_processes time (n_jobs=4): 0.20996499061584473, result = 1.000000078539799
+______________________________
