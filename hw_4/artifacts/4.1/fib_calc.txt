@@ -1,0 +1,92 @@
+sync fibonacci calc...
+______________________________
+calculated fib(100000)
+1. iteration of sync fib(100000) completed
+calculated fib(100000)
+2. iteration of sync fib(100000) completed
+calculated fib(100000)
+3. iteration of sync fib(100000) completed
+calculated fib(100000)
+4. iteration of sync fib(100000) completed
+calculated fib(100000)
+5. iteration of sync fib(100000) completed
+calculated fib(100000)
+6. iteration of sync fib(100000) completed
+calculated fib(100000)
+7. iteration of sync fib(100000) completed
+calculated fib(100000)
+8. iteration of sync fib(100000) completed
+calculated fib(100000)
+9. iteration of sync fib(100000) completed
+calculated fib(100000)
+10. iteration of sync fib(100000) completed
+______________________________
+sync fibonacci time: 1.6425378322601318
+fibonacci calc with threading...
+______________________________
+starting 1 (ident = 6146764800) thread with fib(100000) calc
+starting 2 (ident = 6163591168) thread with fib(100000) calc
+starting 3 (ident = 6180417536) thread with fib(100000) calc
+starting 4 (ident = 6197243904) thread with fib(100000) calc
+starting 5 (ident = 6214070272) thread with fib(100000) calc
+starting 6 (ident = 6230896640) thread with fib(100000) calc
+starting 7 (ident = 6247723008) thread with fib(100000) calc
+starting 8 (ident = 6264549376) thread with fib(100000) calc
+calculated fib(100000)
+starting 9 (ident = 13052702720) thread with fib(100000) calc
+calculated fib(100000)
+calculated fib(100000)
+starting 10 (ident = 14134833152) thread with fib(100000) calc
+calculated fib(100000)
+finishing 1 (ident = 6146764800) thread with fib(100000) calc
+calculated fib(100000)
+calculated fib(100000)
+finishing 2 (ident = 6163591168) thread with fib(100000) calc
+finishing 3 (ident = 6180417536) thread with fib(100000) calc
+finishing 4 (ident = 6197243904) thread with fib(100000) calc
+finishing 5 (ident = 6214070272) thread with fib(100000) calc
+finishing 6 (ident = 6230896640) thread with fib(100000) calc
+calculated fib(100000)
+finishing 7 (ident = 6247723008) thread with fib(100000) calc
+calculated fib(100000)
+finishing 8 (ident = 6264549376) thread with fib(100000) calc
+calculated fib(100000)
+finishing 9 (ident = 13052702720) thread with fib(100000) calc
+calculated fib(100000)
+finishing 10 (ident = 14134833152) thread with fib(100000) calc
+______________________________
+threading fibonacci time: 1.5370631217956543
+fibonacci calc with multiprocessing...
+______________________________
+starting 1 (pid = 4036) process with fib(100000) calc
+starting 2 (pid = 4037) process with fib(100000) calc
+starting 3 (pid = 4038) process with fib(100000) calc
+starting 4 (pid = 4039) process with fib(100000) calc
+starting 5 (pid = 4040) process with fib(100000) calc
+starting 6 (pid = 4041) process with fib(100000) calc
+starting 7 (pid = 4042) process with fib(100000) calc
+starting 8 (pid = 4043) process with fib(100000) calc
+starting 9 (pid = 4044) process with fib(100000) calc
+calculated fib(100000)
+calculated fib(100000)
+calculated fib(100000)
+calculated fib(100000)
+calculated fib(100000)
+calculated fib(100000)
+calculated fib(100000)
+calculated fib(100000)
+calculated fib(100000)
+calculated fib(100000)
+starting 10 (pid = 4045) process with fib(100000) calc
+finishing 1 (pid = 4036) process with fib(100000) calc
+finishing 2 (pid = 4037) process with fib(100000) calc
+finishing 3 (pid = 4038) process with fib(100000) calc
+finishing 4 (pid = 4039) process with fib(100000) calc
+finishing 5 (pid = 4040) process with fib(100000) calc
+finishing 6 (pid = 4041) process with fib(100000) calc
+finishing 7 (pid = 4042) process with fib(100000) calc
+finishing 8 (pid = 4043) process with fib(100000) calc
+finishing 9 (pid = 4044) process with fib(100000) calc
+finishing 10 (pid = 4045) process with fib(100000) calc
+______________________________
+multiprocessing fibonacci time: 0.8061089515686035
